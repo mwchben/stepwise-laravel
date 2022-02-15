@@ -15,6 +15,7 @@
   <div class="col-md-6">
     <label for="inputEmail" class="form-label">Email</label>
     <input type="email" class="form-control" id="inputEmail">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="col-md-6">
     <label for="inputPassword" class="form-label">Password</label>
@@ -25,7 +26,7 @@
     <input type="text" class="form-control" id="inputAddress" placeholder="e.g. Ngong Rd...">
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-dark">Register</button>
   </div>
 </form>
 @endsection
