@@ -22,17 +22,21 @@ Route::get('/', function ()
 }
 );
 
-
+//stepwise routes
 Route::get('posts', [PostsController::class, 'index']);
 
 Route::get('contact', [PostsController::class, 'contact']);
 
 Route::get('posts/{id}', [PostsController::class, 'showPost']);
 
-Route::get('register', [RegistrationController::class, 'index']);
-Route::post('register', [RegistrationController::class, 'store']);
-
 Route::post('posts', [PostsController::class, 'store']);
+
+//register routes
+Route::get('register', [RegistrationController::class, 'index']);
+
+Route::post('/register', [RegistrationController::class, 'store']);
+
+
 //  or group controllers as:
 // Route::controller(PostsController::class)->group(function(){
 //     Route::get('posts', 'index');

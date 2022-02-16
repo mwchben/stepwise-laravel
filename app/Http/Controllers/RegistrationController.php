@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Register;
 
 class RegistrationController extends Controller
 {
@@ -34,7 +35,15 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
+        $register = new Register();
+        $register->inputFname = $request->input("inputFname");
+        $register->inputLname = $request->input("inputLname");
+        $register->inputEmail = $request->input("inputEmail");
+        $register->inputPassword = $request->input("inputPassword");
+        $register->inputAddress = $request->input("inputAddress");
+        $register->save();
         //part 4 of the question
+        return redirect('/');
     }
 
     /**
