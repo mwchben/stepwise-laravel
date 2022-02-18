@@ -44,3 +44,7 @@ Route::post('/register', [RegistrationController::class, 'store']);
 //     Route::post('posts', 'store');   
 // });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
