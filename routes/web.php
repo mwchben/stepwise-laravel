@@ -30,19 +30,17 @@ Route::get('contact', [PostsController::class, 'contact']);
 Route::get('posts/{id}', [PostsController::class, 'showPost']);
 
 Route::post('posts', [PostsController::class, 'store']);
-
-//register routes
-Route::get('register', [RegistrationController::class, 'index']);
-
-Route::post('/register', [RegistrationController::class, 'store']);
-
-
 //  or group controllers as:
 // Route::controller(PostsController::class)->group(function(){
 //     Route::get('posts', 'index');
 //     Route::get('posts{post}', 'show');
 //     Route::post('posts', 'store');   
 // });
+
+//register routes
+Route::get('registers', [RegistrationController::class, 'index']);
+
+Route::post('/register', [RegistrationController::class, 'store']);
 
 
 Auth::routes();
