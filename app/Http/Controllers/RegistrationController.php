@@ -35,6 +35,11 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
+        // $this -> validate($request, [
+        //     'inputFname' => 'required',
+        //     'inputLname' => 'required'
+        // ]);
+
         $register = new Register();
         $register->inputFname = $request->input("inputFname");
         $register->inputLname = $request->input("inputLname");
@@ -43,7 +48,8 @@ class RegistrationController extends Controller
         $register->inputAddress = $request->input("inputAddress");
         $register->save();
         //part 4 of the question
-        return redirect('/');
+        return redirect('/'); 
+        // -> with('success', 'The registration is complete');
     }
 
     /**

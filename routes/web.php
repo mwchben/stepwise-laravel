@@ -37,10 +37,10 @@ Route::post('posts', [PostsController::class, 'store']);
 //     Route::post('posts', 'store');   
 // });
 
-//register routes
-Route::get('registers', [RegistrationController::class, 'index']);
+//registers routes
+Route::get('reg', [RegistrationController::class, 'index']);
 
-Route::post('/register', [RegistrationController::class, 'store']);
+Route::post('reg', [RegistrationController::class, 'store']);
 
 
 Auth::routes();
