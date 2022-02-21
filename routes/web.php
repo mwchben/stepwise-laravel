@@ -38,7 +38,7 @@ Route::post('posts', [PostsController::class, 'store']);
 // });
 
 //registers routes
-Route::get('reg', [RegistrationController::class, 'index']);
+Route::get('reg', [RegistrationController::class, 'create']);
 
 Route::post('reg', [RegistrationController::class, 'store']);
 

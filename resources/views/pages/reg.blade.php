@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('content')
-<form class="row g-3" action="/register" method="POST">
+<form class="row g-3" action="/reg" method="POST">
 @csrf
   <div class="col-md-6">
     <label for="inputFname" class="form-label">First Name</label>
