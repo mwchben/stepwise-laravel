@@ -14,7 +14,8 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        
+        return view('pages.reg');
+    }
     }
 
     /**
