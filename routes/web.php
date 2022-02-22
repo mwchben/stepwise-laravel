@@ -41,6 +41,7 @@ Route::post('posts', [PostsController::class, 'store']);
 Route::get('reg', [RegistrationController::class, 'create']);
 
 Route::post('reg', [RegistrationController::class, 'store']);
+//Route::post('reg', [RegistrationController::class]); -> index called by default
 
 
 Auth::routes();
