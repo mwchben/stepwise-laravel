@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Qoutes') }}</title>
     
 
     <!-- Scripts -->
@@ -23,10 +23,14 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{-- <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet"> --}}
-    
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet"> --}}
 
 </head>
 <body>
+    @include('include.navbar')
+    @include('include.messages')
+    @include('include.br')
       <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -86,6 +90,8 @@
             @yield('content')
         </main>
     </div>
+    @include('include.br')
+    @include('include.footer')
 
 </body>
 </html>

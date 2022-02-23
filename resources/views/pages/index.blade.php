@@ -2,8 +2,5 @@
 
 @section('content') 
 
-<h1>Contact Page</h1>
+<h1>Index Page</h1>
 @endsection
-
-
- {{-- or use @stop --}}

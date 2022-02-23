@@ -13,7 +13,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return "Hey?";
+        // return "Hey?";
     }
 
     /**
@@ -23,7 +23,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return "create";
+        // return "create";
     }
 
     /**
@@ -34,7 +34,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        return "store";
+        // return "store";
     }
 
 
@@ -85,15 +85,15 @@ class PostsController extends Controller
 
     // .........my functions............
     public function contact(){
-        return view('pages.contact');
+    //     return view('pages.contact');
     }
     public function showPost($id){
         //$jina = 'Benja at this post:';
-        $arre = array(
-            'jina'=>'Benj at:',
-            'id'=> $id
-        );
-        return view('pages.post')->with($arre);
+        // $arre = array(
+        //     'jina'=>'Benj at:',
+        //     'id'=> $id
+        // );
+        // return view('pages.post')->with($arre);
 
         //  return view('pages.post',compact('id','jina'));
         

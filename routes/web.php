@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\PagesController;
 
 
 /*
@@ -16,13 +17,13 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
-Route::get('/', function () 
-{
-    return view('welcome');
-}
-);
+// Route::get('/', function () 
+// {
+//     return view('welcome');
+// }
+// );
 
-//stepwise routes
+//quotes postes routes
 Route::get('posts', [PostsController::class, 'index']);
 
 Route::get('contact', [PostsController::class, 'contact']);
@@ -30,6 +31,17 @@ Route::get('contact', [PostsController::class, 'contact']);
 Route::get('posts/{id}', [PostsController::class, 'showPost']);
 
 Route::post('posts', [PostsController::class, 'store']);
+
+//pages postes routes
+Route::get('/', [PagesController::class, 'index']);
+
+Route::get('/contact', [PagesController::class, 'contact']);
+
+Route::get('/about', [PagesController::class, 'showPost']);
+
+Route::post('/others', [PagesController::class, 'store']);
+
+
 //  or group controllers as:
 // Route::controller(PostsController::class)->group(function(){
 //     Route::get('posts', 'index');
@@ -38,9 +50,9 @@ Route::post('posts', [PostsController::class, 'store']);
 // });
 
 //registers routes
-Route::get('reg', [RegistrationController::class, 'create']);
+// Route::get('reg', [RegistrationController::class, 'create']);
 
-Route::post('reg', [RegistrationController::class, 'store']);
+// Route::post('reg', [RegistrationController::class, 'store']);
 //Route::post('reg', [RegistrationController::class]); -> index called by default
 
 
