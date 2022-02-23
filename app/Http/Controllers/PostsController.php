@@ -94,6 +94,12 @@ class PostsController extends Controller
         //     'id'=> $id
         // );
         // return view('pages.post')->with($arre);
+        // @extends('layouts.template')
+        // @section('content')
+        // {{-- <h2>{{$jina}}</h2> --}}
+        // <h2>{{$jina}}{{$id}}</h2>
+        // @endsection
+
 
         //  return view('pages.post',compact('id','jina'));
         
