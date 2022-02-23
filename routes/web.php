@@ -37,9 +37,9 @@ Route::get('/', [PagesController::class, 'index']);
 
 Route::get('/contact', [PagesController::class, 'contact']);
 
-Route::get('/about', [PagesController::class, 'showPost']);
+Route::get('/wisdom', [PagesController::class, 'wisdom']);
 
-Route::post('/others', [PagesController::class, 'store']);
+Route::get('/about', [PagesController::class, 'about']);
 
 
 //  or group controllers as:

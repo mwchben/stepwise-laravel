@@ -14,10 +14,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li><a class="nav-link" href="/">Home</a></li>
-                        <li><a class="nav-link" href="/">Quotes</a></li>
-                        <li><a class="nav-link" href="/">Others</a></li>
-                        <li><a class="nav-link" href="/">Contact</a></li>
-                        <li><a class="nav-link" href="/">About</a></li>
+                        <li><a class="nav-link" href="/wisdom">Wisdom</a></li>
+                        <li><a class="nav-link" href="/contact">Contact</a></li>
+                        <li><a class="nav-link" href="/about">About</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

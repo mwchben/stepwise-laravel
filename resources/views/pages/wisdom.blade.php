@@ -2,5 +2,5 @@
 
 @section('content') 
 
-<h1>Others Page</h1>
+<h1>Posted Quotes here (wisdom) Page</h1>
 @endsection
