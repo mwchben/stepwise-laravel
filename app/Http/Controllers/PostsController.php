@@ -16,8 +16,11 @@ class PostsController extends Controller
     public function index()
     {
         // listing of posts
-        $posts = Post::all();
-        return view('posts.index')->with('posts',$posts);
+        //to paginate
+        // $posts = Post::orderBy('title','desc')->paginate(10);
+
+        $allPosts = Post::all();
+        return view('posts.index')->with('allPosts',$allPosts);
     }
 
     /**
@@ -28,6 +31,7 @@ class PostsController extends Controller
     public function create()
     {
         // represent the form post/create
+        return view('posts.create');
     }
 
     /**
@@ -39,6 +43,18 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         // f() for submitting form (get the form vars as $request) to db
+        // $this->validate($request,[
+        //     'quote'=>'required',
+        //     'bywho' => 'required'            
+        // ]);
+
+        $data = new Post();
+        $data->quote = $request->input("quote");
+        $data->bywho = $request->input("bywho");
+        $data->description = $request->input("description");
+        $data-> save();
+
+        return redirect('/posts');
     }
 
 
@@ -55,9 +71,7 @@ class PostsController extends Controller
         //or $aPost = DB::Select('SELECT * FROM posts');
         // $aPost = Post::orderBy('title','desc')->get(); 
 
-        //to paginate
-        $aPost = Post::orderBy('title','desc')->paginate(10);
-                
+        $aPost = Post::find($id);      
         return view('posts.show')->with('aPost',$aPost);
     }
 

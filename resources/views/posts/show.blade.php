@@ -2,11 +2,12 @@
 
 @section('content') 
 
-<h1>{{$post->quote}}</h1>
-<h4>~{{$post->bywho}}</h4>
+<h1>{{$aPost->quote}}</h1>
+<h4>~{{$aPost->bywho}}</h4>
 
-<div>{{$post->description}}</div>
-<small>Qoute posted at {{$post->created_at}}</small>
+<div>{{$aPost->description}}</div>
+<small>Qoute posted at {{$aPost->created_at}}</small>
+
 
 <a href="/posts">Back</a>
 @endsection

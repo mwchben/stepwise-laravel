@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    // protected $table = 'changeTableName';
+    //public $primarykey = 'id';
+
+    protected $fillable = [
+        "quote",
+        "bywho",
+        "description"
+    ];
 }

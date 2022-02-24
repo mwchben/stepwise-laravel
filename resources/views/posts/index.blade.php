@@ -3,8 +3,8 @@
 @section('content') 
 
 <h1>Quotes:</h1>
-@if(count($posts)>0)
-    @foreach ($posts as $post)
+@if(count($allPosts)>0)
+    @foreach ($allPosts as $post)
         <div>
             <h2>
                 <a href="/posts/{{$post->id}}">
@@ -16,7 +16,7 @@
             <small>Qoute posted at {{$post->created_at}}</small>
         </div>
     @endforeach
-    {{$posts->links()}}
+    {{-- {{$posts->links()}} --}}
 @else
     <p>No Quotes to show</p>
 @endif
