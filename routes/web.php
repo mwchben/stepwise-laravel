@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
-use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PagesController;
 
 
@@ -24,13 +23,16 @@ use App\Http\Controllers\PagesController;
 // );
 
 //quotes postes routes
-Route::get('posts', [PostsController::class, 'index']);
+Route::controller(PostsController::class)->group(function(){
+    Route::get('posts', 'index');
+    Route::get('posts{post}', 'show');
+    Route::put('posts{post}', 'update');
+    Route::delete('posts{post}', 'destroy');
+    Route::get('posts{post}/edit', 'edit');
+    Route::post('posts', 'store');  
+    Route::get('posts/create', 'create');   
+});
 
-Route::get('contact', [PostsController::class, 'contact']);
-
-Route::get('posts/{id}', [PostsController::class, 'showPost']);
-
-Route::post('posts', [PostsController::class, 'store']);
 
 //pages postes routes
 Route::get('/', [PagesController::class, 'index']);
@@ -42,6 +44,8 @@ Route::get('/wisdom', [PagesController::class, 'wisdom']);
 Route::get('/about', [PagesController::class, 'about']);
 
 
+
+
 //  or group controllers as:
 // Route::controller(PostsController::class)->group(function(){
 //     Route::get('posts', 'index');
@@ -49,7 +53,7 @@ Route::get('/about', [PagesController::class, 'about']);
 //     Route::post('posts', 'store');   
 // });
 
-//registers routes
+//registers routes rem to include use App\Http\Controllers\RegistrationController;
 // Route::get('reg', [RegistrationController::class, 'create']);
 
 // Route::post('reg', [RegistrationController::class, 'store']);

@@ -25,4 +25,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function showAllUsers(){
+        $users = User::all();
+        return view('welcome', compact('users'));
+    }
 }

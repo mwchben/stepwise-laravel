@@ -13,7 +13,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // return "Hey?";
+        // listing of posts
     }
 
     /**
@@ -23,7 +23,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        // return "create";
+        // represent the form post/create
     }
 
     /**
@@ -34,7 +34,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // return "store";
+        // f() for submitting form (get the form vars as $request) to db
     }
 
 
@@ -46,7 +46,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        //shows a given post ::  what $id to show
     }
 
     /**
@@ -57,7 +57,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        //edit form ::  what $id to edit
     }
 
     /**
@@ -69,7 +69,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //update from edit form ::  what $id to update and the vars from form
     }
 
     /**
@@ -80,33 +80,33 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //which one to destroy
     }
 
     // .........my functions............
-    public function contact(){
-    //     return view('pages.contact');
-    }
-    public function showPost($id){
-        //$jina = 'Benja at this post:';
-        // $arre = array(
-        //     'jina'=>'Benj at:',
-        //     'id'=> $id
-        // );
-        // return view('pages.post')->with($arre);
-        // @extends('layouts.template')
-        // @section('content')
-        // {{-- <h2>{{$jina}}</h2> --}}
-        // <h2>{{$jina}}{{$id}}</h2>
-        // @endsection
+    // public function contact(){
+    // //     return view('pages.contact');
+    // }
+    // public function showPost($id){
+    //     //$jina = 'Benja at this post:';
+    //     // $arre = array(
+    //     //     'jina'=>'Benj at:',
+    //     //     'id'=> $id
+    //     // );
+    //     // return view('pages.post')->with($arre);
+    //     // @extends('layouts.template')
+    //     // @section('content')
+    //     // {{-- <h2>{{$jina}}</h2> --}}
+    //     // <h2>{{$jina}}{{$id}}</h2>
+    //     // @endsection
 
 
-        //  return view('pages.post',compact('id','jina'));
+    //     //  return view('pages.post',compact('id','jina'));
         
         
-        //chaining with the with() method taking two params(name of var and var itself)
-        //return view('pages.post')->with('id',$id); when public function showPost($id)
-        //or use......return view('post',compact('id')); which can pass many
-        //params like return view('post',compact('id','sth','sth2')); and same on showPost
-    }
+    //     //chaining with the with() method taking two params(name of var and var itself)
+    //     //return view('pages.post')->with('id',$id); when public function showPost($id)
+    //     //or use......return view('post',compact('id')); which can pass many
+    //     //params like return view('post',compact('id','sth','sth2')); and same on showPost
+    // }
 }
