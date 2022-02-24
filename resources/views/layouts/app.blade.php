@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +33,7 @@
     {{-- <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet"> --}}
 
 </head>
-<body>
+<body style="background-color: #DFA">
     @include('include.navbar')
     @include('include.messages')
   
@@ -41,3 +47,6 @@
 
 </body>
 </html>
+
+
+{{-- website colors are #0A0 and #DFA--}}
