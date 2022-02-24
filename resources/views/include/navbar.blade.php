@@ -15,6 +15,7 @@
                     <ul class="navbar-nav me-auto">
                         <li><a class="nav-link" href="/">Home</a></li>
                         <li><a class="nav-link" href="/wisdom">Wisdom</a></li>
+                        <li><a class="nav-link" href="/posts">Quotes</a></li>
                         <li><a class="nav-link" href="/contact">Contact</a></li>
                         <li><a class="nav-link" href="/about">About</a></li>
                     </ul>
