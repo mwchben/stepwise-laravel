@@ -10,10 +10,6 @@ class PagesController extends Controller
         return view('pages.index');
     }
 
-    public function wisdom(){
-        return view('pages.wisdom');
-    }
-
     public function about(){
         return view('pages.about');
     }
