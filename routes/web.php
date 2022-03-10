@@ -39,8 +39,6 @@ Route::get('/', [PagesController::class, 'index']);
 
 Route::get('/contact', [PagesController::class, 'contact']);
 
-Route::get('/wisdom', [PagesController::class, 'wisdom']);
-
 Route::get('/about', [PagesController::class, 'about']);
 
 

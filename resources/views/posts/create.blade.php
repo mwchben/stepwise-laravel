@@ -2,7 +2,7 @@
 
 @section('content') 
 
-    <form class=" row g-5 container" action="/posts" method="POST">
+    <form class=" row g-5 container" action="/posts/create" method="POST">
 
        @csrf
         <div class="col-md-12">
