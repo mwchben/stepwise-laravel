@@ -35,8 +35,6 @@ Route::controller(PostsController::class)->group(function(){
 
 
 //pages postes routes
-Route::get('/', [PagesController::class, 'index']);
-
 Route::get('/contact', [PagesController::class, 'contact']);
 
 Route::get('/about', [PagesController::class, 'about']);
