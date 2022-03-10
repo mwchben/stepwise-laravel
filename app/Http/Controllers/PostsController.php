@@ -54,7 +54,8 @@ class PostsController extends Controller
         $data->description = $request->input("description");
         $data-> save();
 
-        return redirect('/posts');
+        return redirect('/');
+        //return redirect('/posts');
     }
 
 

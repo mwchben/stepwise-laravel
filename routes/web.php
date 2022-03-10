@@ -24,17 +24,19 @@ use App\Http\Controllers\PagesController;
 
 //quotes postes routes
 Route::controller(PostsController::class)->group(function(){
+    Route::get('/', 'index');
     Route::get('/posts', 'index');
     Route::get('/posts/{id}', 'show');
     Route::put('/posts/{id}', 'update');
     Route::delete('/posts/{id}', 'destroy');
     Route::get('/posts/{id}/edit', 'edit');
     Route::post('/posts', 'store');  
-    Route::get('/posts/create', 'create');   
+    Route::get('/make', 'create');   
 });
 
 
 //pages postes routes
+
 Route::get('/contact', [PagesController::class, 'contact']);
 
 Route::get('/about', [PagesController::class, 'about']);

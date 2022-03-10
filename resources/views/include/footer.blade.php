@@ -1,5 +1,5 @@
 
-<div class="bg-transparent" style="position: absolute; width: 100%; bottom: 40px;left: 0;box-shadow: 0px -0.5rem 1rem 0px rgba(0, 0, 0, 0.15) !important;">
+<div class="bg-transparent" style="left: 0;box-shadow: 0px -0.5rem 1rem 0px rgba(0, 0, 0, 0.15) !important;">
   <footer class="my-1 container">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>

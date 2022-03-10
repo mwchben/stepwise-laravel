@@ -13,8 +13,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li><a class="nav-link" href="/">Home</a></li>
-                        <li><a class="nav-link" href="/posts">Quotes</a></li>
+                        <li><a class="nav-link" href="/posts">Home</a></li>
                         <li><a class="nav-link" href="/contact">Contact</a></li>
                         <li><a class="nav-link" href="/about">About</a></li>
                     </ul>
@@ -22,7 +21,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        <li class="nav-item"><a class="nav-link" href="/posts/create">Write Quote</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/make">Write Quote</a></li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
