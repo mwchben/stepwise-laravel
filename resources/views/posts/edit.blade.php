@@ -2,9 +2,10 @@
 
 @section('content') 
 
-    <form class=" row g-5 container" action="/posts/{id}" method="PUT">
+    <form class=" row g-5 container" action="{{url('posts/{id}/update')}}" method="POST">
 
        @csrf
+       @method('PUT')
         <h3>Edit The Quote</h3>
         <div class="col-md-12">
             <label class="form-label h5">What's the Quote</label>
@@ -18,11 +19,8 @@
 
         
         <div class="col-md-12">
-            <label class="form-label h5">Tell Us More About It</label>
-            <textarea class="form-control" placeholder="What about it" name="description" value="{{$aPost->description}}"></textarea>
-            <div>
-            Describe the quote😀.
-            </div>
+            <label class="form-label h5">Describe the quote😀</label>
+            <textarea class="form-control" placeholder="What about it" name="description" value="{!! $aPost->description !!}"></textarea>
         </div>
         
         
@@ -42,7 +40,7 @@
         </div> --}}
         
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-primary" type="submit">Update</button>
         </div>
     </form>
 @endsection

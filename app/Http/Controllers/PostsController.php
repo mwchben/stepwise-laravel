@@ -96,6 +96,8 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    //  ...................................................
     public function update(Request $request, $id)
     {
         //update from edit form ::  what $id to update and the vars from form
@@ -103,7 +105,7 @@ class PostsController extends Controller
         $data->quote = $request->input("quote");
         $data->bywho = $request->input("bywho");
         $data->description = $request->input("description");
-        $data-> save();
+        $data-> update();
 
         return redirect('/');
     }

@@ -27,7 +27,7 @@ Route::controller(PostsController::class)->group(function(){
     Route::get('/', 'index');
     Route::get('/posts', 'index');
     Route::get('/posts/{id}', 'show');
-    Route::put('/posts/{id}', 'update');
+    Route::put('/posts/{id}/update', 'update');
     Route::delete('/posts/{id}', 'destroy');
     Route::get('/posts/{id}/edit-quote', 'edit');
     Route::post('/posts', 'store');  
