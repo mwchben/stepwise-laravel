@@ -85,6 +85,8 @@ class PostsController extends Controller
     public function edit($id)
     {
         //edit form ::  what $id to edit
+        $aPost = Post::find($id);      
+        return view('posts.edit')->with('aPost',$aPost);
     }
 
     /**
@@ -97,6 +99,13 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         //update from edit form ::  what $id to update and the vars from form
+        $data = Post::find($id);
+        $data->quote = $request->input("quote");
+        $data->bywho = $request->input("bywho");
+        $data->description = $request->input("description");
+        $data-> save();
+
+        return redirect('/');
     }
 
     /**

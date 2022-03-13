@@ -2,24 +2,24 @@
 
 @section('content') 
 
-    <form class=" row g-5 container" action="/posts" method="POST">
+    <form class=" row g-5 container" action="/posts/{id}" method="PUT">
 
        @csrf
-       <h3>Share The Quote</h3>
+        <h3>Edit The Quote</h3>
         <div class="col-md-12">
             <label class="form-label h5">What's the Quote</label>
-            <input type="text" class="form-control" placeholder="'The Quote'" name="quote">
+            <input type="text" class="form-control" placeholder="'The Quote'" name="quote" value="{{$aPost->quote}}">
         </div>
 
         <div class="col-md-12">
             <label class="form-label h5">From who?</label>
-            <input type="text" class="form-control" placeholder="by?" name="bywho">
+            <input type="text" class="form-control" placeholder="by?" name="bywho" value="{{$aPost->bywho}}">
         </div>
 
         
         <div class="col-md-12">
             <label class="form-label h5">Tell Us More About It</label>
-            <textarea class="form-control" placeholder="What about it" name="description"></textarea>
+            <textarea class="form-control" placeholder="What about it" name="description" value="{{$aPost->description}}"></textarea>
             <div>
             Describe the quote😀.
             </div>

@@ -29,7 +29,7 @@ Route::controller(PostsController::class)->group(function(){
     Route::get('/posts/{id}', 'show');
     Route::put('/posts/{id}', 'update');
     Route::delete('/posts/{id}', 'destroy');
-    Route::get('/posts/{id}/edit', 'edit');
+    Route::get('/posts/{id}/edit-quote', 'edit');
     Route::post('/posts', 'store');  
     Route::get('/make', 'create');   
 });
