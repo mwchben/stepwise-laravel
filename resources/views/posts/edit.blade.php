@@ -2,7 +2,7 @@
 
 @section('content') 
 
-    <form class=" row g-5 container" action="{{url('posts/{id}/update')}}" method="POST">
+    <form class=" row g-5 container" action="{{url('posts/{id}/update')}}" method="POST" enctype="multipart/form-data">
 
        @csrf
        @method('PUT')
