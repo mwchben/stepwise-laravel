@@ -20,7 +20,7 @@
         
         <div class="col-md-12">
             <label class="form-label h5">Describe the quote😀</label>
-            <textarea class="form-control" placeholder="What about it" name="description" value="{!! $aPost->description !!}"></textarea>
+            <textarea class="form-control" placeholder="What about it" name="description"}>{{$aPost->description}}</textarea>
         </div>
         
         
