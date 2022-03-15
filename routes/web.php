@@ -28,7 +28,7 @@ Route::controller(PostsController::class)->group(function(){
     Route::get('/posts', 'index');
     Route::get('/posts/{id}', 'show');
     Route::put('/posts/update/{id}', 'update');
-    Route::delete('/posts/{id}', 'destroy');
+    Route::delete('/posts/delete/{id}', 'destroy');
     Route::get('/posts/{id}/edit-quote', 'edit');
     Route::post('/posts', 'store');  
     Route::get('/make', 'create');   
