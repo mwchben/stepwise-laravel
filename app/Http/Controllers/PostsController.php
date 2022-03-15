@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
 
@@ -102,10 +103,28 @@ class PostsController extends Controller
     {
         //update from edit form ::  what $id to update and the vars from form
         $data = Post::find($id);
-        $data->quote = $request->input("quote");
-        $data->bywho = $request->input("bywho");
-        $data->description = $request->input("description");
-        $data-> update();
+        
+        // DB::table('posts')->where('id', $request->id)->update([
+        //     'quote' => $request->quote,
+        //     'bywho' => $request->bywho,
+        //     'description' => $request->description,
+        //     ]);
+
+        // $data = DB::table('posts')
+        //       ->where('id', $id)
+        //       ->update([
+        //           'quote' => $request->quote,
+        //           'bywho' => $request->bywho,
+        //           'description' => $request->description
+        //         ]);
+        // $data->quote=Input::get('quote');
+        // $data->bywho=Input::get('bywho');
+        // $data->description=Input::get('description');
+        
+        $data->quote = $request->input('quote');
+        $data->bywho = $request->input('bywho');
+        $data->description = $request->input('description');
+        $data-> save();
 
         return redirect('/');
     }

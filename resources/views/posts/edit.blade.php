@@ -2,11 +2,12 @@
 
 @section('content') 
 
-    <form class=" row g-5 container" action="{{url('posts/{id}/update')}}" method="POST" enctype="multipart/form-data">
+    <form class=" row g-5 container" action="{{url('posts/update/'.$aPost->id) }}" method="POST" enctype="multipart/form-data">
 
        @csrf
        @method('PUT')
         <h3>Edit The Quote</h3>
+        <input class="form-control" type="hidden" name="id" id="id" value="{{ $aPost->id}}">
         <div class="col-md-12">
             <label class="form-label h5">What's the Quote</label>
             <input type="text" class="form-control" placeholder="'The Quote'" name="quote" value="{{$aPost->quote}}">
