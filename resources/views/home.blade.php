@@ -22,13 +22,21 @@
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Quote</th>
-                                        <th scope="col">Action</th>
+                                        <th scope="col">Action 1</th>
+                                        <th scope="col">Action 2</th>
                                     </tr>
                                     @foreach ($posts as $aPost)
                                     <tr>
                                         <th scope="row">{{$aPost->id}}</th>
-                                        <th>{{$aPost->quote}}</th>
-                                        <th><a class="btn btn-success" href="/posts/editQuote/{{$aPost->id}}">Edit this Quote</a></th>
+                                        <td>{{$aPost->quote}}</td>
+                                        <td><a class="btn btn-success" href="/posts/editQuote/{{$aPost->id}}">Edit this Quote</a></td>
+                                        <td>
+                                            <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
+                                                @method('DELETE')
+                                                @csrf
+                                                <button type="submit" class="btn btn-danger">Remove Quote</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </table>

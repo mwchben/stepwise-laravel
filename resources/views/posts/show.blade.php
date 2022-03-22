@@ -6,7 +6,8 @@
 <h4>~{{$aPost->bywho}}</h4>
 
 <div><p>{{$aPost->description}}</p></div>
-<small>Quote posted at {{$aPost->created_at}}</small>
+<h6>by {{$aPost->user->name}}</h6>
+<small>on{{$aPost->created_at}}</small>
 <br><br>
 
 <div class="col-12" style="color: #DFA">

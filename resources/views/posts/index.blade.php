@@ -6,14 +6,14 @@
 @if(count($allPosts)>0)
     @foreach ($allPosts as $post)
         <div>
-            <h2>
+            <h3>
                 <a href="/posts/{{$post->id}}">
                     {{$post->quote}}
                 </a>
-            </h2>
+            </h3>
             <h4>~{{$post->bywho}}</h4>
             
-            <small>Qoute posted at {{$post->created_at}}</small>
+            <small>Qoute posted at {{$post->created_at}} by {{$post->user->name}}</small>
         </div>
     @endforeach
     {{-- {{$posts->links()}} --}}
