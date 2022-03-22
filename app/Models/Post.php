@@ -16,4 +16,7 @@ class Post extends Model
         "bywho",
         "description"
     ];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
