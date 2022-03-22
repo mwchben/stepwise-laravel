@@ -53,6 +53,7 @@ class PostsController extends Controller
         $data->quote = $request->input("quote");
         $data->bywho = $request->input("bywho");
         $data->description = $request->input("description");
+        $data->user_id = auth()->user()->id; //to track what post belongs to what user
         $data-> save();
 
         return redirect('/');
