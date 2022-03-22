@@ -18,6 +18,17 @@
                         
                         <div class="row">
                             <div class="col-12"><h4>My Posts:</h4></div>
+                                <table class="table">
+                                    <tr>
+                                        <th>Title</th>
+                                    </tr>
+                                    @foreach ($posts as $aPost)
+                                    <tr>
+                                        <th>{{$aPost->quote}}</th>
+                                        <th><a class="btn" href="/posts/editQuote/{{$aPost->id}}"></a></th>
+                                    </tr>
+                                    @endforeach
+                                </table>
                             <div class="col-12 btn btn-small"><a class="nav-link" href="/make">Write Quote</a></div>
                         </div>
                     </div>
