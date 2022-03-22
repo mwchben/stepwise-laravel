@@ -16,21 +16,24 @@
                     <div class="container">
                         {{ __('You are logged in!') }}
                         
-                        <div class="row">
-                            <div class="col-12"><h4>My Posts:</h4></div>
-                                <table class="table">
+                        
+                            <h4>My Posts:</h4>
+                                <table class="table table-hover">
                                     <tr>
-                                        <th>Title</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Quote</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                     @foreach ($posts as $aPost)
                                     <tr>
+                                        <th scope="row">{{$aPost->id}}</th>
                                         <th>{{$aPost->quote}}</th>
-                                        <th><a class="btn" href="/posts/editQuote/{{$aPost->id}}"></a></th>
+                                        <th><a class="btn btn-success" href="/posts/editQuote/{{$aPost->id}}">Edit this Quote</a></th>
                                     </tr>
                                     @endforeach
                                 </table>
-                            <div class="col-12 btn btn-small"><a class="nav-link" href="/make">Write Quote</a></div>
-                        </div>
+                            <h4>Create New Post:</h4>
+                                <a class="btn btn-success" href="/make">Write Quote</a>
                     </div>
                 </div>
             </div>
