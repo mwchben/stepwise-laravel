@@ -37,19 +37,19 @@
                                     <tr>
                                         <th scope="row">{{$aPost->id}}</th>
                                         <td >{{$aPost->quote}}</td>
-                                        <td><a class="btn btn-success" href="/posts/editQuote/{{$aPost->id}}">Edit this Quote</a></td>
+                                        <td><a class="btn btn-outline-success" href="/posts/editQuote/{{$aPost->id}}">Edit this Quote</a></td>
                                         <td>
                                             <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger">Remove Quote</button>
+                                                <button type="submit" class="btn btn-outline-danger">Remove Quote</button>
                                             </form>
                                         </td>
                                     </tr>
                                     @endforeach
                                 </table>
                             <h4>Create New Post:</h4>
-                                <a class="btn btn-success" href="/make">Write Quote</a>
+                                <a class="btn btn-outline-dark" href="/make">Write Quote</a>
                     </div>
                 </div>
             </div>
