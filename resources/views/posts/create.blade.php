@@ -2,6 +2,12 @@
 
 @section('content') 
 
+<style>
+    .form-control {
+        background-color: transparent;
+    }
+</style>
+
     <form class=" row g-5 container" action="/posts" method="POST">
 
        @csrf
@@ -42,7 +48,7 @@
         </div> --}}
         
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-outline-success" type="submit">Share this Quote</button>
         </div>
     </form>
 @endsection

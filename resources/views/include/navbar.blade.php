@@ -1,4 +1,8 @@
-
+<style>
+    .dropdown-menu{
+        background-color: transparent;
+    }
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow">
             <div class="container-fluid">

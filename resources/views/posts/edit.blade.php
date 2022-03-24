@@ -2,6 +2,12 @@
 
 @section('content') 
 
+<style>
+    .form-control {
+        background-color: transparent;
+    }
+</style>
+
     <form class=" row g-5 container" action="{{url('posts/update/'.$aPost->id) }}" method="POST" enctype="multipart/form-data">
 
        @csrf
@@ -41,7 +47,7 @@
         </div> --}}
         
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Update</button>
+            <button class="btn btn-outline-success" type="submit">Update</button>
         </div>
     </form>
 @endsection

@@ -50,7 +50,7 @@
                                     @endforeach
                                 </table>
                             @else
-                                <p>No Quotes to show</p>
+                                <h3>You Currently have no Quotes!!</h3>
                             @endif
                             <h4>Create New Post:</h4>
                                 <a class="btn btn-outline-dark" href="/make">Write Quote</a>
