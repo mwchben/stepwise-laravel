@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Welcome To Your Dashboard Control') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,9 +16,17 @@
                     <div class="container">
                         {{ __('You are logged in!') }}
                         
-                        
+                    <style>
+                            .card {
+                            background-color: transparent;
+                            border: none;
+                            }
+                            th,td {
+                                padding: 16px;
+                            }
+                    </style>
                             <h4>My Posts:</h4>
-                                <table class="table table-hover">
+                                <table class="table-transparent table-hover">
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Quote</th>
@@ -28,7 +36,7 @@
                                     @foreach ($posts as $aPost)
                                     <tr>
                                         <th scope="row">{{$aPost->id}}</th>
-                                        <td>{{$aPost->quote}}</td>
+                                        <td >{{$aPost->quote}}</td>
                                         <td><a class="btn btn-success" href="/posts/editQuote/{{$aPost->id}}">Edit this Quote</a></td>
                                         <td>
                                             <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">

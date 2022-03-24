@@ -10,9 +10,9 @@
     <div class="list-group-flush">
         <div class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h3 class="mb-1">{{$aPost->quote}}</h3>              
+                <h2 class="mb-1">{{$aPost->quote}}</h2>              
             </div>
-            <h6 class="mb-3">~{{$aPost->bywho}}</h6>
+            <h5 class="mb-3">~{{$aPost->bywho}}</h5>
             <p class="mb-1">{{$aPost->description}}</p>
         </div>
         <div class="list-group-item">
@@ -26,13 +26,18 @@
 <br><br>
 
 
-    <a href="/posts"><button type="button" class="btn btn-outline-dark">Back</button></a>
-    <a href="/posts/editQuote/{{$aPost->id}}"><button type="button" class="btn btn-outline-dark">Edit</button></a>  
-
-    <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
+<div class="btn-group" role="group">
+    <a href="/posts"><button type="button" class="btn btn-outline-dark mx-2">Back</button></a>
+    <a href="/posts/editQuote/{{$aPost->id}}"><button type="button" class="btn mx-2 btn-outline-dark">Edit</button></a>
+     <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
         @method('DELETE')
         @csrf
-        <button type="submit" class="btn btn-outline-dark">Remove Quote</button>
+        <button type="submit" class="btn mx-2 btn-outline-dark">Remove Quote</button>
     </form>
+  </div>
+    
+      
+
+   
 </div>    
 @endsection
