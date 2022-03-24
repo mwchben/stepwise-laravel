@@ -25,6 +25,7 @@
                                 padding: 16px;
                             }
                     </style>
+                            @if(count($posts)>0)
                             <h4>My Posts:</h4>
                                 <table class="table-transparent table-hover">
                                     <tr>
@@ -48,6 +49,9 @@
                                     </tr>
                                     @endforeach
                                 </table>
+                            @else
+                                <p>No Quotes to show</p>
+                            @endif
                             <h4>Create New Post:</h4>
                                 <a class="btn btn-outline-dark" href="/make">Write Quote</a>
                     </div>

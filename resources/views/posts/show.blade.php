@@ -28,11 +28,11 @@
 
 <div class="btn-group" role="group">
     <a href="/posts"><button type="button" class="btn btn-outline-dark mx-2">Back</button></a>
-    <a href="/posts/editQuote/{{$aPost->id}}"><button type="button" class="btn mx-2 btn-outline-dark">Edit</button></a>
+    <a href="/posts/editQuote/{{$aPost->id}}"><button type="button" class="btn mx-2 btn-outline-success">Edit</button></a>
      <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
         @method('DELETE')
         @csrf
-        <button type="submit" class="btn mx-2 btn-outline-dark">Remove Quote</button>
+        <button type="submit" class="btn mx-2 btn-outline-danger">Remove Quote</button>
     </form>
   </div>
     
