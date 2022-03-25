@@ -28,12 +28,17 @@
 
 <div class="btn-group" role="group">
     <a href="/posts"><button type="button" class="btn btn-outline-dark mx-2">Back</button></a>
-    <a href="/posts/editQuote/{{$aPost->id}}"><button type="button" class="btn mx-2 btn-outline-success">Edit</button></a>
-     <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
-        @method('DELETE')
-        @csrf
-        <button type="submit" class="btn mx-2 btn-outline-danger">Remove Quote</button>
-    </form>
+    {{-- this part removes the edit and delete btn if a guest is on --}}
+    @if(!Auth::guest()) 
+        @if(Auth::user()->id == $aPost->user_id)
+            <a href="/posts/editQuote/{{$aPost->id}}"><button type="button" class="btn mx-2 btn-outline-success">Edit</button></a>
+            <form method="POST" action="{{ url('posts/delete/'.$aPost->id) }}">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn mx-2 btn-outline-danger">Remove Quote</button>
+            </form>
+        @endif
+    @endif
   </div>
     
       
