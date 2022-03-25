@@ -101,7 +101,14 @@ class PostsController extends Controller
     public function edit($id)
     {
         //edit form ::  what $id to edit
-        $aPost = Post::find($id);      
+        $aPost = Post::find($id); 
+        
+        //ensures no other member via URL typing can edit other's 
+        if(auth()->user()->id !== $aPost->user_id){
+            return redirect('posts');
+            // ->with('message','Not Permitted'); include this once error msg is up and running! 
+        }
+        
         return view('posts.edit')->with('aPost',$aPost);
     }
 
@@ -153,7 +160,13 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //which one to destroy
-        $data = Post::find($id);
+        $data = Post::find($id); 
+
+        //ensures no other member via URL typing can delete other's
+        if(auth()->user()->id !== $aPost->user_id){
+            return redirect('posts');
+            // ->with('message','Not Permitted'); include this once error msg is up and running! 
+        }
         $data -> delete(); 
         return redirect('/');
     }
