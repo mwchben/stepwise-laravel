@@ -9,6 +9,20 @@ use App\Models\Post;
 
 class PostsController extends Controller
 {
+      /**
+     * Create a new controller instance to ensure only logged in users can 
+     * manipulate the quotes.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => [
+            //this views can only be seen if not a member
+            'index',
+            'show'
+        ]]);
+    }
     /**
      * Display a listing of the resource.
      *
