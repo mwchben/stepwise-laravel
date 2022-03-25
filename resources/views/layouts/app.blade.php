@@ -33,11 +33,23 @@
     {{-- <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet"> --}}
 
 </head>
+<style>
+html,body {
+    min-height: 100% !important;
+}
+ .content {
+    min-height: calc(100vh - 60px);
+}
+
+.footer-try {
+    min-height: 60px;
+}	
+</style>
 <body style="background-color: #DFA">
     @include('include.navbar')
     @include('include.messages')
   
-      <div id="app">
+      <div id="app" class="content">
         <main class="py-5 container">
             @yield('content')
         </main>
