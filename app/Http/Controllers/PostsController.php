@@ -63,11 +63,18 @@ class PostsController extends Controller
         //     'bywho' => 'required'            
         // ]);
 
+        if ($request->hasFile('image')){ 
+            $path = $request->file('image')->storeAs('public/imageUploads', $image_uploaded);
+        }else {
+            $image_uploaded = 'no_image.png';
+        }
+
         $data = new Post();
         $data->quote = $request->input("quote");
         $data->bywho = $request->input("bywho");
         $data->description = $request->input("description");
         $data->user_id = auth()->user()->id; //to track what post belongs to what user
+        $data->image = $image_uploaded;
         $data-> save();
 
         return redirect('/');

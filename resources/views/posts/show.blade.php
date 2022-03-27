@@ -10,7 +10,8 @@
     <div class="list-group-flush">
         <div class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h2 class="mb-1">{{$aPost->quote}}</h2>              
+                <h2 class="mb-1">{{$aPost->quote}}</h2>  
+                <img src="{{asset('storage/'.$aPost->image)}}" class="card-img-top" alt="image for Quote">            
             </div>
             <h5 class="mb-3">~{{$aPost->bywho}}</h5>
             <p class="mb-1">{{$aPost->description}}</p>
