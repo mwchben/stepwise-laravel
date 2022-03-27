@@ -8,7 +8,7 @@
     }
 </style>
 
-    <form class=" row g-5 container" action="/posts" method="POST">
+    <form class=" row g-5 container" action="/posts" method="POST" enctype="multipart/data">
 
        @csrf
        <h3>Share The Quote</h3>
@@ -32,10 +32,10 @@
         </div>
         
         
-        {{-- <div class="mb-3">
-            <input type="file" class="form-control" aria-label="file example" required>
+        <div class="mb-3">
+            <input type="file" class="form-control" name="image" required>
             <div class="invalid-feedback">Example invalid form file feedback</div>
-        </div> --}}
+        </div>
         {{-- <div class="col-md-12">
             <label for="validationDefault04" class="form-label">State</label>
             <select class="form-select" id="validationDefault04" required>
