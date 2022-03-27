@@ -58,12 +58,23 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         // f() for submitting form (get the form vars as $request) to db
+        // $request->validate([
+        //     'file' => 'required|,jpeg,bmp,png,jpg|max:1999',
+    
+        //    ]);
         // $this->validate($request,[
         //     'quote'=>'required',
         //     'bywho' => 'required'            
         // ]);
 
         if ($request->hasFile('image')){ 
+            //var assigning
+            $file = $request->file('image');
+            $name = $file->getClientOriginalName();
+            $nameWithoutExtension = pathinfo($name, PATHINFO_FILENAME);
+            $extension = $file->getClientOriginalExtension();
+
+            $image_uploaded = $nameWithoutExtension.time().".".$extension;
             $path = $request->file('image')->storeAs('public/imageUploads', $image_uploaded);
         }else {
             $image_uploaded = 'no_image.png';
