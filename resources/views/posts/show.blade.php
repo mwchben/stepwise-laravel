@@ -5,20 +5,18 @@
   .list-group-item {
     background-color: transparent;
 }
-    .img-thumbnail {
-        height: 200px;
-        width: 200px;
-    }
+
   .txtOnImage {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-  background-attachment: fixed;
-  width: 400px;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-  margin: 20px;
+    background: url({{asset('storage/imageUploads/'.$aPost->image)}});
+    background-attachment: fixed;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.txtOnImage > header {
+.txtOnImage > div {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -28,7 +26,7 @@
   background-attachment: fixed;
   overflow: hidden;
 }
-.txtOnImage > header::before {
+.txtOnImage > div::before {
   content: "";
   position: absolute;
   top: -20px;
@@ -40,7 +38,7 @@
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
-.txtOnImage > header::after {
+.txtOnImage > div::after {
   content: "";
   position: absolute;
   top: 0;
@@ -49,7 +47,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.25)
 }
-.txtOnImage > header > h1 {
+.txtOnImage > div > h5 {
   margin: 0;
   color: white;
   position: relative;
@@ -66,8 +64,11 @@
             <div class="d-flex w-100 justify-content-between">
                 <h2 class="mb-1">{{$aPost->quote}}</h2>                           
             </div>
-            <img src="{{asset('storage/imageUploads/'.$aPost->image)}}" class="img-thumbnail rounded" alt="image for Quote">
-            <h5 class="mb-3">~{{$aPost->bywho}}</h5>
+            <div class="txtOnImage img-thumbnail rounded">
+                {{-- <img src="{{asset('storage/imageUploads/'.$aPost->image)}}" class="img-thumbnail rounded" alt="image for Quote"> --}}
+                <div><h5>{{$aPost->bywho}}</h5></div>
+            </div>
+            {{-- <h5 class="mb-3">~{{$aPost->bywho}}</h5> --}}
             <p class="mb-1">{{$aPost->description}}</p>
         </div>
         <div class="list-group-item">

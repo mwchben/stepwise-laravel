@@ -8,7 +8,7 @@
     background-color: transparent;
 }
 </style>
-<h3>Current Posted Quotes:</h3>
+<h3>Current Posted Quotes: make posts for image modifiable in edit and delete n' resize the damn images</h3>
 <hr>
 
 @if(count($allPosts)>0)
