@@ -8,7 +8,8 @@
 
   .txtOnImage {
     background: url({{asset('storage/imageUploads/'.$aPost->image)}});
-    background-attachment: fixed;
+    background-attachment: inherit;
+    background-size: contain;
     height: 200px;
     width: 200px;
     position: relative;
