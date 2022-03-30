@@ -21,8 +21,11 @@
             <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="container">
                 <div class="row">   
+                
                     <div class="col-2">
-                        <img src="{{asset('storage/imageUploads/'.$post->image)}}" class="img-thumbnail rounded" alt="image for Quote">
+                        <a href="/posts/{{$post->id}}">
+                            <img src="{{asset('storage/imageUploads/'.$post->image)}}" class="img-thumbnail rounded" alt="image for Quote">
+                        </a>
                     </div>
                     <div class="col-10 d-flex justify-content-between align-items-start">
                         <div class="ms-4 ">
