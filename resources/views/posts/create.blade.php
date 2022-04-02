@@ -36,16 +36,7 @@
             <input type="file" class="form-control" name="image">
             <div class="invalid-feedback">Example invalid form file feedback</div>
         </div>
-        {{-- <div class="col-md-12">
-            <label for="validationDefault04" class="form-label">State</label>
-            <select class="form-select" id="validationDefault04" required>
-            <option selected disabled value="">Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            </select>
-        </div> --}}
+       
         
         <div class="col-12">
             <button class="btn btn-outline-success" type="submit">Share this Quote</button>
