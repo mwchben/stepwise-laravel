@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
+//for deleting image in diks
+use Illuminate\Support\Facades\Storage;
+ 
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
@@ -203,10 +206,15 @@ class PostsController extends Controller
         $data = Post::find($id); 
 
         //ensures no other member via URL typing can delete other's
-        if(auth()->user()->id !== $aPost->user_id){
+        if(auth()->user()->id !== $data->user_id){
             return redirect('posts');
             // ->with('message','Not Permitted'); include this once error msg is up and running! 
         }
+
+        if($data->image != 'no_image.png'){
+            Storage::delete('public/imageUploads/'.$data->image);
+        }
+
         $data -> delete(); 
         return redirect('/');
     }
@@ -242,3 +250,6 @@ class PostsController extends Controller
     //     //params like return view('post',compact('id','sth','sth2')); and same on showPost
     // }
 }
+
+
+//i have used $data in destroy() and update() methods but $aPost in edit() and show() methods
