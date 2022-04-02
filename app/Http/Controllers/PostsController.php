@@ -146,18 +146,20 @@ class PostsController extends Controller
     //  ...................................................
     public function update(Request $request, $id)
     {
-        $file = $request->file('image');
-        //hence...
-        $name = $file->getClientOriginalName();
-        $nameWithoutExtension = pathinfo($name, PATHINFO_FILENAME);
-        $extension = $file->getClientOriginalExtension();
-        //new name of image to upload
+        if ($request->hasFile('image')){ 
+            //var assigning
+            $file = $request->file('image');
+            //hence...
+            $name = $file->getClientOriginalName();
+            $nameWithoutExtension = pathinfo($name, PATHINFO_FILENAME);
+            $extension = $file->getClientOriginalExtension();
+            //new name of image to upload
 
-        $image_uploaded = $nameWithoutExtension."_".time().".".$extension;
+            $image_uploaded = $nameWithoutExtension."_".time().".".$extension;
 
-        //path in local folder for image to  be stored
-        $path = $request->file('image')->storeAs('public/imageUploads', $image_uploaded);
-
+            //path in local folder for image to  be stored
+            $path = $request->file('image')->storeAs('public/imageUploads', $image_uploaded);
+        }
         //update from edit form ::  what $id to update and the vars from form
         $data = Post::find($id);
         
