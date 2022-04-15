@@ -35,9 +35,11 @@ class PostsController extends Controller
     {
         // listing of posts
         //to paginate
-        // $posts = Post::orderBy('title','desc')->paginate(10);
+        //$allPosts = Post::orderBy('quote','desc')->paginate(4);
 
-        $allPosts = Post::all();
+
+        //$allPosts = Post::all();
+        $allPosts = Post::all()->sortByDesc('created_at');
         return view('posts.index')->with('allPosts',$allPosts);
     }
 
