@@ -12,34 +12,49 @@
     </header>
 
     <main class="px-3">
-        <h1>Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead"> 
+        <div class="card bg-transparent" style="width: 90%;">
+            <img src="{{URL::asset('/images/profile.png')}}" class="card-img-top" alt="Profile Image">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent">
+                    <button type="button" class="bi bi-envelope-fill btn btn-outline-dark">
+                        Kneekelly123@gmail.com
+                    </button>
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <button type="button" class="bi bi-telephone-fill btn btn-outline-info">
+                        Cell Number
+                    </button>
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <button type="button" class="bi bi-github btn btn-outline-secondary">
+                        My Projects
+                    </button>
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <button type="button" class="bi bi-whatsapp btn btn-outline-success">
+                      Whatsapp Me
+                    </button>
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <button type="button" class="bi bi-messenger btn btn-outline-primary">
+                        Messenger on FB
+                    </button>
+                </li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="text-decoration-none card-link">Card link</a>
+                <a href="#" class="text-decoration-none card-link">Another link</a>
+            </div>
+        </div>
         <!-- alt="..." on <img> element -->
         {{-- <i class="bi-alarm"style="font-size: 2rem; color: cornflowerblue;">alarm</i> --}}
-       
-        <button type="button" class="bi bi-envelope-fill btn btn-outline-dark">
-                Kneekelly123@gmail.com
-        </button>
-        <button type="button" class="bi bi-telephone-fill btn btn-outline-info">
-                Cell Number
-        </button>
-        <button type="button" class="bi bi-github btn btn-outline-secondary">
-                My Projects
-        </button>
-        <button type="button" class="bi bi-whatsapp btn btn-outline-success">
-                Whatsapp Me
-        </button>
-        <button type="button" class="bi bi-messenger btn btn-outline-primary">
-                Messenger on FB
-        </button>
-  
-        </p>
+    
+        
     </main>
-
-    <footer class="mt-auto">
-        <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-    </footer>
 </div>
 @endsection
 
