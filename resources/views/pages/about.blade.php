@@ -56,6 +56,10 @@
                 <p>Quotes is a laravel based-web application for
                  sharing users favourite quotes with each other through blog posts.
                  Get to know who quoted and the meaning.</p>
+                <p>We intend to have a large community of users to publish thousands
+                of personalized collections. By creating an account, post a quote and share the ideas in
+                all dialect or tongue. 
+                </p>
                 <a href="#" class="text-decoration-none card-link">
                     <i class="bi bi-bug-fill" style="font-size: 1.7rem; color: #dc3545;">Report a bug</i>
                 </a> 
