@@ -32,12 +32,17 @@
                     </div>
                     <div class="col-10 d-flex justify-content-between align-items-start">
                         <div class="ms-4 ">
-                        
-                            <a class="fw-bold text-secondary text-decoration-none" href="/posts/{{$post->id}}">
-                            <h4>"{{$post->quote}}"</h4>
-                            </a>
-                            <h4>~{{$post->bywho}}</h4>                
-                        <small>Qoute posted at {{$post->created_at}}</small>
+                                <figure class="text-center">
+                                        <blockquote class="blockquote">
+                                            <a class="fw-bold text-secondary text-decoration-none" href="/posts/{{$post->id}}">
+                                                <h4>"{{$post->quote}}"</h4>
+                                            </a>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                            {{$post->bywho}} <cite title="Source Title">(Quote)</cite>
+                                        </figcaption>
+                                </figure>               
+                            <small>Qoute posted at {{$post->created_at}}</small>
                         </div>
                         <span class="badge bg-secondary float-end rounded-pill">{{$post->user->name}}</span>
                     </div>

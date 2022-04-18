@@ -12,11 +12,18 @@
     </header>
 
     <main class="px-3">
-        <div class="card bg-transparent" style="width: 90%;">
+        <div class="card bg-transparent d-flex justify-content-center">
             <img src="{{URL::asset('/images/Cover.jpg')}}" class="card-img-top" alt="Profile Image">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">The Web App</h5>
+                <p class="card-text">The application comes inspired with the desire of sharing knowledge
+                through wise saying from different sources. It can be shared in any language. Other features yet to include are:
+                <ul class="list-unstyled">
+                    <li><i>Sharing them on social media</i><li>
+                    <li><i>Ability to <i class="bi bi-hand-thumbs-up-fill" style="color: #dc3545;"></i> or <i class="bi bi-hand-thumbs-down-fill" style="color: #dc3545;"></i> a vote</i></li>
+                    <li><i>Downloadable PDF of the quotes</i></li>
+                </ul>
+                </p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="d-flex justify-content-center list-group-item bg-transparent">
