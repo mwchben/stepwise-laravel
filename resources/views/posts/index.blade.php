@@ -37,14 +37,14 @@ verifying sources in an effort to catch discrepancies.</h5>
                                 <figure class="text-center">
                                         <blockquote class="blockquote">
                                             <a class="fw-bold text-secondary text-decoration-none" href="/posts/{{$post->id}}">
-                                                <h4>"{{$post->quote}}"</h4>
+                                                <h4 style="color: #0B0B65">"{{$post->quote}}"</h4>
                                             </a>
                                         </blockquote>
-                                        <figcaption class="blockquote-footer">
+                                        <figcaption class="blockquote-footer" style="color: #0B0B65">
                                             {{$post->bywho}} <cite title="Source Title">(Quote)</cite>
                                         </figcaption>
                                 </figure>               
-                            <small>Qoute posted at {{$post->created_at}}</small>
+                            <small>Date Posted: <h6>{{$post->created_at}}</h6></small>
                         </div>
                         <span class="badge bg-secondary float-end rounded-pill">{{$post->user->name}}</span>
                     </div>

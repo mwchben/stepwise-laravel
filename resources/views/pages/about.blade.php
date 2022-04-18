@@ -20,7 +20,8 @@
                 through wise saying from different sources. It can be shared in any language. Other features yet to include are:
                 <ul class="list-unstyled">
                     <li><i>Sharing them on social media</i><li>
-                    <li><i>Ability to <i class="bi bi-hand-thumbs-up-fill" style="color: #dc3545;"></i> or <i class="bi bi-hand-thumbs-down-fill" style="color: #dc3545;"></i> a vote</i></li>
+                    <li><i>Ability to <i class="bi bi-bookmark-fill" style="color: #0B0B65"></i> a quote</i><li>
+                    <li><i>Ability to <i class="bi bi-hand-thumbs-up-fill" style="color: #198754;"></i> or <i class="bi bi-hand-thumbs-down-fill" style="color: #dc3545;"></i> a vote</i></li>
                     <li><i>Downloadable PDF of the quotes</i></li>
                 </ul>
                 </p>
