@@ -15,6 +15,8 @@
 <h3>Current Posted Quotes: make posts for image modifiable in edit and delete n' resize the damn images</h3>
 <h3>Order the posts to have most recent 1st</h3>
 <hr>
+<h3>https://getbootstrap.com/docs/5.0/content/typography/  on blockquote</h3>
+<hr>
 
 @if(count($allPosts)>0)
     <ol class="list-group list-group-flush">
