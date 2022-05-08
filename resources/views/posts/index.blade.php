@@ -12,11 +12,12 @@
     width: 120px;
 }
 </style>
-<h5 class="text-center">
+<h5 class="text-center">All current posts by different users:</h5>
+<p>
 We value authenticity and accuracy hence our readers are 
 encouraged to make contributions and suggest edits. They can proofreading and 
 verifying sources in an effort to catch discrepancies.</h5>
-<hr>
+<p>
 
 <hr>
 
