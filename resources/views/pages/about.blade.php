@@ -61,7 +61,7 @@
                 of personalized collections. By creating an account, post a quote and share the ideas in
                 all dialect or tongue. 
                 </p>
-                <a href="#" class="text-decoration-none card-link">
+                <a href="https://github.com/mwchben/stepwise-laravel/labels/bug" class="text-decoration-none card-link">
                     <i class="bi bi-bug-fill" style="font-size: 1.7rem; color: #dc3545;">Report a bug</i>
                 </a> 
             </div>

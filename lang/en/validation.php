@@ -142,10 +142,18 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'bywho' => [
+            'required' => 'We need to know the author😀'
+        ],
+        'quote' => [
+            'required' => 'We need to know actual quote😀'
+        ],
+        'description' => [
+            'required' => 'Provide some description😀',
+            'max' => 'Description too long (150 words required😀)'
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

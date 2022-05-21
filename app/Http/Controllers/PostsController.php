@@ -63,13 +63,22 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         // f() for submitting form (get the form vars as $request) to db
-        // $request->validate([
-        //     'file' => 'required|,jpeg,bmp,png,jpg|max:1999',
-    
-        //    ]);
+   
+        $request->validate([
+            'quote'=> ['required'],
+            'bywho' => ['required'],
+            // 'file' => 'required|,jpeg,bmp,png,jpg|max:1999',
+            'description' => ['required','max:150'],
+           ]);
+
         // $this->validate($request,[
         //     'quote'=>'required',
         //     'bywho' => 'required'            
+        // ]);
+
+        // $validatedData = $request->validate([
+        //     'title' => ['required', 'unique:posts', 'max:255'],
+        //     'body' => ['required'],
         // ]);
 
         if ($request->hasFile('image')){ 
