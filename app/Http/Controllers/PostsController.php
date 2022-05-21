@@ -98,7 +98,7 @@ class PostsController extends Controller
         $data->image = $image_uploaded;
         $data-> save();
 
-        return redirect('/');
+        return redirect('/')->with('success','Quote added successfully');
         //return redirect('/posts');
     }
 
@@ -193,7 +193,7 @@ class PostsController extends Controller
         }
         $data-> save();
 
-        return redirect('/');
+        return redirect('/')->with('success','Quote updated successfully');
     }
 
     /**
