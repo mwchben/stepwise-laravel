@@ -218,7 +218,7 @@ class PostsController extends Controller
         }
 
         $data -> delete(); 
-        return redirect('/');
+        return redirect('/')->with('success','Quote removed successfully');
     }
 
 
